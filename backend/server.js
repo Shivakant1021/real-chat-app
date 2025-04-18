@@ -22,16 +22,13 @@ app.get('/', (req, res) => {
   res.send('API is running...');
 });
 
-app.get('/user', (req, res) => {
-    res.send('name:shiva');
-});
-
 // Socket.io connection
 io.on('connection', (socket) => {
   console.log('New client connected:', socket.id);
 
   socket.on('send_message', (data) => {
-    io.emit('receive_message', data);
+    console.log('Received message:', data);
+    io.emit('receive_message', data); // Emit the message to all clients
   });
 
   socket.on('disconnect', () => {
