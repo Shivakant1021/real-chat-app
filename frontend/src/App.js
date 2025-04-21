@@ -11,7 +11,7 @@ function App() {
         <Route path="/" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/chat/:user" element={<Home />} /> {/* ✅ fixed route */}
+        <Route path="/chat/:user" element={<Home />} /> 
       </Routes>
     </BrowserRouter>
   );

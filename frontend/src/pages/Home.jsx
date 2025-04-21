@@ -34,7 +34,7 @@ function Home() {
     socket.emit('send_message', newMessage);
 
     // Add the message to the local state immediately
-    setMessages((prevMessages) => [...prevMessages, newMessage]);
+    setMessages((prevMessages) => [...prevMessages]);
     setInput('');
   };
 
